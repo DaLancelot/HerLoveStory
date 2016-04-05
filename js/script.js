@@ -4,7 +4,7 @@
         overlay: 'rgba(232, 0, 130, .05)'
 });*/
 var f = 0;
-$('div#next-slide').on('click', function () {
+/*$('div#next-slide').on('click', function () {
   if (f == 0) {
     addT();
     giveExp();
@@ -12,7 +12,7 @@ $('div#next-slide').on('click', function () {
     addNL();
   };
   return f = 1;
-});
+});*/
 
 /*$('body').on('click', function () {
   $('#modal, #overlay').fadeToggle(600).toggle(display);
