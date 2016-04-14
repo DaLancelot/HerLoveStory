@@ -6,7 +6,7 @@ html {
   background-color: rgba(64, 80, 90, 1);
 }
 
-body div.cont {
+body div.cont{
   width: 80%;
   height: 600px;
   float: left;
@@ -18,57 +18,57 @@ body div.cont {
   background-color: transparent;
 }
 
-body div.cont span.card {
+body span.card {
   float: left;
   margin: 10px;
   background-color: rgba(64, 80, 90, .3);
 }
 
-body div.cont span.card.small {
+body span.card.small {
   width: 64px;
   height: 64px;
   border-radius: 8px;
 }
 
-body div.cont span.card.small a img {
+body span.card.small a img {
   width: 64px;
   height: 64px;
   border-radius: 8px;
 }
 
-body div.cont span.card.big {
+body span.card.big {
   width: 128px;
   height: 128px;
   border-radius: 10px;
 }
 
-body div.cont span.card.big a img {
+body span.card.big a img {
   width: 128px;
   height: 128px;
   border-radius: 10px;
 }
 
-body div.cont span.card.portrait {
+body span.card.portrait {
   width: 64px;
   height: 128px;
   border-radius: 4px;
 }
 
-body div.cont span.card.portrait a img {
+body span.card.portrait a img {
   width: 64px;
   height: 128px;
   border-radius: 4px;
 }
 
-body div.cont span.card.rare {
+body span.card.rare {
   border: 1px solid rgba(121, 121, 212, 1);
 }
 
-body div.cont span.card.epic {
+body span.card.epic {
   border: 1px solid rgba(191, 92, 191, 1);
 }
 
-body div.cont span.card.legend {
+body span.card.legend {
   border: 1px solid rgba(251, 164, 18, 1);
 }
 

@@ -6,7 +6,7 @@ cardEl.on("mouseover", function() {
   //cardInfoPositioner($(this));
   var x = $(this).position().left,
       y = $(this).position().top;
-  if ($(this).parent().parent().hasClass("small")) {
+  /*if ($(this).parent().parent().hasClass("small")) {
     card_info.css({"left" : ((x + 74) + "px")});
     card_info.css({"top" : ((y + 0) + "px")});
   } else if ($(this).parent().parent().hasClass("big")) {
@@ -15,6 +15,31 @@ cardEl.on("mouseover", function() {
   } else if ($(this).parent().parent().hasClass("portrait")) {
     card_info.css({"left" : ((x + 74) + "px")});
     card_info.css({"top" : ((y + 0) + "px")});
+  };*/
+  if ($(this).parent().parent().hasClass("small") || $(this).parent().parent().hasClass("portrait")) {
+    if ($(window).height() <= (card_info.height() + $(this).height() + y)) {
+      card_info.css({"top" : ((y - card_info.height()) + "px")});
+    } else if ($(window).height() >= (card_info.height() + $(this).height() + y)){
+      card_info.css({"top" : ((y + 0) + "px")});
+    };
+
+    if ($(window).width() >= (card_info.width() + $(this).width() + $(this).position().left)) {
+      card_info.css({"left" : ((x + 74) + "px")});
+    } else if ($(window).width() <= (card_info.width() + $(this).width() + $(this).position().left)) {
+      card_info.css({"left" : ((x - card_info.width() - 32) + "px")});
+    };
+  } else if ($(this).parent().parent().hasClass("big")) {
+    if ($(window).height() <= (card_info.height() + $(this).height() + y)) {
+      card_info.css({"top" : ((y - card_info.height()) + "px")});
+    } else if ($(window).height() >= (card_info.height() + $(this).height() + y)){
+      card_info.css({"top" : ((y + 0) + "px")});
+    };
+
+    if ($(window).width() >= (card_info.width() + $(this).width() + $(this).position().left)) {
+      card_info.css({"left" : ((x + 138) + "px")});
+    } else if ($(window).width() <= (card_info.width() + $(this).width() + $(this).position().left)) {
+      card_info.css({"left" : ((x - card_info.width() - 32) + "px")});
+    };
   };
   $(this).on("mouseout", function () {
     cardInfo("hide");
