@@ -80,15 +80,8 @@ body div#level-bar {
   z-index: 99;
 }
 
-body div#level-bar span#progress::after {
-  content: attr(class) '%';
-  float: right;
-  font-size: .7em;
-  color: rgba(64, 80, 90, 1);
-}
-
 body div#level-bar span#progress {
-  width: 27%;
+  width: 0%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -168,14 +161,13 @@ body div#story-wrp div#dlg-wrp {
 body div#story-wrp div#dlg-wrp div#next-slide {
   position: fixed;
   bottom: 100px;
-  display: flex;
-  margin-left: auto;
-  margin-left: auto;
+  text-align: center;
   z-index: 9;
   font-family: 'Open Sans';
   font-size: 1.2em;
   color: rgba(232, 0, 130, 1);
   font-weight: 400;
+  cursor: pointer !important;
 }
 
 body div#story-wrp div#dlg-wrp div#dlg-container {
@@ -225,7 +217,7 @@ body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect:first-child {
   }
 }
 
-body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect, div#dlg-sect:only-child {
+body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect, div#dlg-sect {
   float: left;
   width: 100% !important;
   height: 200px;
@@ -249,7 +241,7 @@ body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect, div#dlg-sect:only
   transition: all .2s linear;
 }
 
-body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect:last-child {
+body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect.slide {
   float: left;
   width: 100% !important;
   height: 200px;
@@ -327,16 +319,28 @@ body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect h2 {
   color: rgba(232, 0, 130, 1);
 }
 
+body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect:first-child p {
+  color: rgba(64, 80, 90, 1);
+}
+
 body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect p {
   font-size: 1.2em;
   text-align: center;
+  color: rgba(64, 80, 90, 0);
+}
+
+body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect:first-child p::first-letter {
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: 'Georgia';
+  color: rgba(232, 0, 130, .5);
 }
 
 body div#story-wrp div#dlg-wrp div#dlg-container div#dlg-sect p::first-letter {
   font-size: 1.5em;
   font-weight: 700;
   font-family: 'Georgia';
-  color: rgba(232, 0, 130, .5);
+  color: rgba(232, 0, 130, 0);
 }
 
 body div#modal {
